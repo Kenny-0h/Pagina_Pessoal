@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página pessoal e portfólio técnico de Nome Profissional.">
+    <title>Nome Profissional | Portfólio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Seu CSS personalizado (Ajuste o caminho conforme sua pasta) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<!-- HEADER MOBILE (Visível apenas em telas menores que 992px) -->
+<header class="mobile-header d-lg-none sticky-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between py-3">
+        <a href="#inicio" class="brand text-decoration-none">Nome Profissional</a>
+        <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-sm theme-button" id="themeToggleMobile" type="button" aria-label="Alternar tema">
+                <span class="theme-icon">☀️</span>
+            </button>
+            <button class="btn btn-sm menu-button" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                    aria-controls="sidebar" aria-label="Abrir menu">
+                ☰
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- SIDEBAR LATERAL -->
+<div class="offcanvas-lg offcanvas-start sidebar" tabindex="-1" id="sidebar" aria-labelledby="sidebarTitle">
+    <div class="offcanvas-header d-lg-none">
+        <h2 class="offcanvas-title h5" id="sidebarTitle">Menu</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column p-0">
+        <div class="sidebar-inner">
+            <a href="#inicio" class="brand text-decoration-none d-none d-lg-block">Nome Profissional</a>
+
+            <nav class="nav flex-column gap-1 mt-lg-5">
+                <a class="nav-link" href="#inicio">Início</a>
+                <a class="nav-link" href="#sobre">Sobre</a>
+                <a class="nav-link" href="#experiencia">Experiência</a>
+                <a class="nav-link" href="#habilidades">Habilidades</a>
+                <a class="nav-link" href="#projetos">Projetos</a>
+                <a class="nav-link" href="#publicacoes">Publicações</a>
+                <a class="nav-link" href="#contato">Contato</a>
+            </nav>
+
+            <div class="sidebar-footer mt-auto">
+                <button class="btn theme-button w-100 text-start d-flex align-items-center justify-content-between"
+                        id="themeToggle" type="button">
+                    <span>
+                        <span class="theme-icon me-2">☀️</span>
+                        <span class="theme-label">Tema claro</span>
+                    </span>
+                    <small class="text-muted" style="font-size: 0.75rem;">Alternar</small>
+                </button>
+                <a class="small text-body-secondary text-decoration-none d-block mt-3" href="../index.html">Escolher
+                    versão</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
+<main class="page-content">
+
+    <!-- HERO -->
+    <section id="inicio" class="hero-section section-block">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="row align-items-center min-vh-75 g-5">
+                <div class="col-lg-8">
+                    <p class="eyebrow">PORTFÓLIO TÉCNICO</p>
+                    <h1 class="hero-title">Nome Profissional</h1>
+                    <p class="hero-subtitle">
+                        Técnico em Redes de Computadores e profissional em formação
+                        com interesses em bancos de dados, qualidade e arquitetura de software.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 mt-4">
+                        <a href="#projetos" class="btn btn-primary px-4">Ver projetos</a>
+                        <a href="#contato" class="btn btn-outline-secondary px-4">Contato</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="hero-symbol" aria-hidden="true">
+                        <span>{ }</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK INFO -->
+    <section class="quick-info section-block">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="row g-0">
+                <div class="col-md-4 info-cell">
+                    <span class="info-number">01</span>
+                    <h2>Banco de Dados</h2>
+                    <p>Estruturação, modelagem e administração de bancos relacionais.</p>
+                </div>
+                <div class="col-md-4 info-cell">
+                    <span class="info-number">02</span>
+                    <h2>Qualidade</h2>
+                    <p>Interesse em QA e nos processos de qualidade do desenvolvimento.</p>
+                </div>
+                <div class="col-md-4 info-cell">
+                    <span class="info-number">03</span>
+                    <h2>Arquitetura</h2>
+                    <p>Interesse em arquitetura, frameworks e software industrial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section-block">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="section-heading">
+                <p class="eyebrow">SOBRE</p>
+                <h2>Perfil técnico</h2>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <p class="display-6 fw-semibold lh-sm">
+                        Tecnologia, engenharia e construção de soluções.
+                    </p>
+                </div>
+                <div class="col-lg-7">
+                    <p>
+                        Sou formado como Técnico em Redes de Computadores pelo CEFET-MG,
+                        campus Nepomuceno. Tenho interesse em diferentes áreas da computação,
+                        com foco especial em bancos de dados, qualidade de software e arquitetura.
+                    </p>
+                    <p>
+                        Minha formação e experiências envolvem programação, redes, bancos
+                        relacionais, paradigmas de programação e desenvolvimento de software.
+                    </p>
+
+                    <div class="row g-3 mt-3">
+                        <div class="col-sm-6">
+                            <div class="mini-card">
+                                <span>Formação</span>
+                                <strong>Técnico em Redes de Computadores</strong>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mini-card">
+                                <span>Atuação</span>
+                                <strong>Desenvolvimento e qualidade de software</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia" class="section-block section-muted">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="section-heading">
+                <p class="eyebrow">EXPERIÊNCIA</p>
+                <h2>Experiência profissional</h2>
+            </div>
+
+            <article class="experience-card">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-4">
+                        <p class="small text-body-secondary mb-2">INSTITUIÇÃO</p>
+                        <h3>Instituto Mineiro de Agropecuária — IMA</h3>
+                    </div>
+                    <div class="col-lg-8">
+                        <p>
+                            Participação ativa no processo de qualidade do desenvolvimento
+                            de três sistemas públicos.
+                        </p>
+
+                        <div class="tag-list">
+                            <span class="tag">SIDAGRO</span>
+                            <span class="tag">Sistema de Apoio Fiscal</span>
+                            <span class="tag">Sistema de Geoprocessamento</span>
+                        </div>
+
+                        <div class="publication-callout mt-4">
+                            <p class="small text-body-secondary mb-1">PUBLICAÇÃO RELACIONADA</p>
+                            <h4>Artigo sobre Engenharia de Software</h4>
+                            <p class="mb-3">
+                                Trabalho publicado no SAST 2026, com atuação como primeiro autor.
+                            </p>
+                            <a href="#" class="text-decoration-none fw-semibold">Ver publicação →</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section-block">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="section-heading">
+                <p class="eyebrow">COMPETÊNCIAS</p>
+                <h2>Habilidades</h2>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h3 class="h5 mb-3">Linguagens</h3>
+                    <div class="skill-grid">
+                        <a class="skill-card" href="https://en.cppreference.com/w/c" target="_blank"
+                           rel="noopener">C</a>
+                        <a class="skill-card" href="https://en.cppreference.com/w/cpp" target="_blank" rel="noopener">C++</a>
+                        <a class="skill-card" href="https://learn.microsoft.com/dotnet/csharp/" target="_blank"
+                           rel="noopener">C#</a>
+                        <a class="skill-card" href="https://dev.java/" target="_blank" rel="noopener">Java</a>
+                        <a class="skill-card" href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank"
+                           rel="noopener">JavaScript</a>
+                        <a class="skill-card" href="https://www.python.org/" target="_blank" rel="noopener">Python</a>
+                        <a class="skill-card" href="https://www.haskell.org/" target="_blank" rel="noopener">Haskell</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h3 class="h5 mb-3">Banco de Dados</h3>
+                    <div class="skill-grid">
+                        <a class="skill-card" href="https://www.postgresql.org/" target="_blank" rel="noopener">PostgreSQL</a>
+                        <a class="skill-card" href="https://www.mysql.com/" target="_blank" rel="noopener">MySQL</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">SQL</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Modelagem</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Administração de SGBDs</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h3 class="h5 mb-3">Paradigmas</h3>
+                    <div class="skill-grid">
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">POO</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Programação Funcional</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Programação Orientada a
+                            Aspectos</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h3 class="h5 mb-3">Outros conhecimentos</h3>
+                    <div class="skill-grid">
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Redes de Computadores</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Qualidade de Software</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Arquitetura de Software</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section-block section-muted">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="section-heading">
+                <p class="eyebrow">PORTFÓLIO</p>
+                <h2>Projetos</h2>
+                <p class="section-intro">
+                    Projetos acadêmicos e trabalhos que podem ser disponibilizados publicamente.
+                </p>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-6 col-xl-4">
+                    <button class="project-card w-100 text-start" type="button"
+                            data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-project-title="Projeto de Compiladores"
+                            data-project-tech="C++ · Compiladores"
+                            data-project-summary="Projeto desenvolvido para a disciplina de Compiladores. Este texto é um espaço reservado para o resumo do projeto.">
+                        <span class="project-index">01</span>
+                        <span class="project-title">Projeto de Compiladores</span>
+                        <span class="project-meta">C++ · Compiladores</span>
+                        <span class="project-arrow">↗</span>
+                    </button>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <button class="project-card w-100 text-start" type="button"
+                            data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-project-title="Projeto de Engenharia de Software"
+                            data-project-tech="Java · Engenharia de Software"
+                            data-project-summary="Projeto desenvolvido para a disciplina de Engenharia de Software. Este texto é um espaço reservado para o resumo do projeto.">
+                        <span class="project-index">02</span>
+                        <span class="project-title">Projeto de Engenharia de Software</span>
+                        <span class="project-meta">Java · Engenharia de Software</span>
+                        <span class="project-arrow">↗</span>
+                    </button>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <button class="project-card w-100 text-start" type="button"
+                            data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-project-title="Otimização e Heurísticas"
+                            data-project-tech="Python · Jupyter · Solvers"
+                            data-project-summary="Notebooks e implementações desenvolvidos para a disciplina de Programação Matemática. Este texto é um espaço reservado para o resumo do projeto.">
+                        <span class="project-index">03</span>
+                        <span class="project-title">Otimização e Heurísticas</span>
+                        <span class="project-meta">Python · Jupyter · Solvers</span>
+                        <span class="project-arrow">↗</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUBLICAÇÕES -->
+    <section id="publicacoes" class="section-block">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="section-heading">
+                <p class="eyebrow">PRODUÇÃO</p>
+                <h2>Publicações</h2>
+            </div>
+
+            <article class="publication-card">
+                <div>
+                    <p class="small text-body-secondary mb-2">SAST 2026</p>
+                    <h3>Artigo sobre Engenharia de Software</h3>
+                    <p>
+                        Publicação relacionada à experiência profissional e às áreas de
+                        interesse em Engenharia de Software.
+                    </p>
+                </div>
+                <a href="#" class="btn btn-outline-secondary">Ver publicação →</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact-section section-block">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="row align-items-end g-5">
+                <div class="col-lg-7">
+                    <p class="eyebrow">CONTATO</p>
+                    <h2>Vamos conversar.</h2>
+                    <p class="lead text-body-secondary">
+                        Para contato profissional ou acadêmico, utilize um dos meus e-mails.
+                    </p>
+                </div>
+                <div class="col-lg-5">
+                    <div class="contact-links">
+                        <a href="mailto:email.profissional@exemplo.com">email.profissional@exemplo.com</a>
+                        <a href="mailto:email.academico@exemplo.com">email.academico@exemplo.com</a>
+                        <a href="#" target="_blank" rel="noopener">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- MODAL DE PROJETO -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <div>
+                    <p class="eyebrow mb-2">PROJETO</p>
+                    <h2 class="modal-title h3" id="projectModalLabel">Projeto</h2>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body pt-0">
+                <p id="projectModalTech" class="text-body-secondary"></p>
+                <p id="projectModalSummary"></p>
+                <a id="projectModalLink" href="#" class="btn btn-primary mt-2">Ver no GitHub →</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- RODAPÉ DA PÁGINA -->
+<footer class="footer">
+    <div class="container-fluid px-4 px-md-5 d-flex flex-column flex-md-row justify-content-between gap-2">
+        <span>© 2026 Nome Profissional</span>
+        <a href="../index.html">Escolher versão</a>
+    </div>
+</footer>
+
+<!-- Scripts do Bootstrap e Personalizado -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
