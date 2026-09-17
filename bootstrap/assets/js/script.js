@@ -62,7 +62,8 @@ function setupProjectModal() {
         document.getElementById("projectModalSummary").textContent =
             trigger.dataset.projectSummary || "";
 
-        document.getElementById("projectModalLink").href = "#";
+        document.getElementById("projectModalLink").href =
+            trigger.dataset.projectLink || trigger.dataset.projectGithub || "#";
     });
 }
 

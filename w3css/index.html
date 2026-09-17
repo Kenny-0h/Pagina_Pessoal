@@ -1,10 +1,447 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página pessoal e portfólio técnico de Nome Profissional.">
+    <title>Nome Profissional | Portfólio</title>
+
+    <!-- W3.CSS Framework -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
+<!-- HEADER MOBILE -->
+<header class="mobile-header w3-top w3-hide-large">
+    <div class="w3-bar w3-padding d-flex-between">
+        <a href="#inicio" class="brand">Nome Profissional</a>
+        <div class="w3-right d-flex-gap">
+            <button class="w3-button w3-round theme-button" id="themeToggleMobile" type="button"
+                    aria-label="Alternar tema">
+                <span class="theme-icon">☀️</span>
+            </button>
+            <button class="w3-button w3-round menu-button" id="menuToggle" type="button" aria-label="Abrir menu">
+                ☰
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- OVERLAY PARA SIDEBAR NO MOBILE -->
+<div class="w3-overlay w3-hide-large" id="sidebarOverlay"></div>
+
+<!-- SIDEBAR LATERAL -->
+<aside class="w3-sidebar w3-bar-block w3-collapse sidebar" id="sidebar">
+    <div class="sidebar-inner">
+        <div class="w3-bar-item sidebar-header w3-hide-large d-flex-between">
+            <h2 class="h5 m-0">Menu</h2>
+            <button type="button" class="w3-button w3-transparent" id="sidebarClose" aria-label="Fechar">&times;
+            </button>
+        </div>
+
+        <a href="#inicio" class="brand w3-hide-small w3-hide-medium">Nome Profissional</a>
+
+        <nav class="nav-menu">
+            <a class="nav-link w3-bar-item w3-button w3-round" href="#inicio">Início</a>
+            <a class="nav-link w3-bar-item w3-button w3-round" href="#sobre">Sobre</a>
+            <a class="nav-link w3-bar-item w3-button w3-round" href="#experiencia">Experiência</a>
+            <a class="nav-link w3-bar-item w3-button w3-round" href="#habilidades">Habilidades</a>
+            <a class="nav-link w3-bar-item w3-button w3-round" href="#projetos">Projetos</a>
+            <a class="nav-link w3-bar-item w3-button w3-round" href="#publicacoes">Publicações</a>
+            <a class="nav-link w3-bar-item w3-button w3-round" href="#contato">Contato</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="w3-button w3-round theme-button w-100" id="themeToggle" type="button">
+                <span class="d-flex-between">
+                    <span>
+                        <span class="theme-icon">☀️</span>
+                        <span class="theme-label">Tema claro</span>
+                    </span>
+                    <small class="text-muted">Alternar</small>
+                </span>
+            </button>
+            <a class="small text-body-secondary d-block mt-3 text-decoration-none" href="../index.html">Escolher
+                versão</a>
+        </div>
+    </div>
+</aside>
+
+<!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
+<main class="page-content">
+
+    <!-- HERO -->
+    <section id="inicio" class="hero-section section-block">
+        <div class="container-fluid">
+            <div class="w3-row-padding w3-flex-vertical-center min-vh-75">
+                <div class="w3-col l8 m12">
+                    <p class="eyebrow">PORTFÓLIO TÉCNICO</p>
+                    <h1 class="hero-title">L. Kennedy</h1>
+                    <p class="hero-subtitle">
+                        Técnico em Redes de Computadores e profissional em formação com interesses em bancos de dados,
+                        qualidade e arquitetura de software.
+                    </p>
+                    <div class="d-flex-gap mt-4">
+                        <a href="#projetos" class="w3-button w3-round btn-primary">Ver projetos</a>
+                        <a href="#contato" class="w3-button w3-round btn-outline-secondary">Contato</a>
+                    </div>
+                </div>
+
+                <div class="w3-col l4 m12">
+                    <div class="hero-symbol" aria-hidden="true">
+                        <span>{  }</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK INFO -->
+    <section class="quick-info section-block">
+        <div class="container-fluid">
+            <div class="w3-row">
+                <div class="w3-col m4 s12 info-cell">
+                    <span class="info-number">01</span>
+                    <h2>Banco de Dados</h2>
+                    <p>Interesse em estruturação, modelagem e administração de bancos relacionais.</p>
+                </div>
+                <div class="w3-col m4 s12 info-cell">
+                    <span class="info-number">02</span>
+                    <h2>Qualidade</h2>
+                    <p>Interesse em QA e nos processos de qualidade do desenvolvimento.</p>
+                </div>
+                <div class="w3-col m4 s12 info-cell">
+                    <span class="info-number">03</span>
+                    <h2>Arquitetura</h2>
+                    <p>Interesse em arquitetura, frameworks e software industrial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section-block">
+        <div class="container-fluid">
+            <div class="section-heading">
+                <p class="eyebrow">SOBRE</p>
+                <h2>Perfil técnico</h2>
+            </div>
+
+            <div class="w3-row-padding">
+                <div class="w3-col l5 m12">
+                    <p class="display-6 fw-semibold lh-sm">
+                        Tecnologia, engenharia e construção de soluções.
+                    </p>
+                </div>
+                <div class="w3-col l7 m12">
+                    <p>
+                        Formado como Técnico em Redes de Computadores pelo CEFET-MG,
+                        campus Nepomuceno. Tenho interesse em diferentes áreas da computação,
+                        com foco especial em bancos de dados, qualidade de software e arquitetura.
+                    </p>
+                    <p>
+                        Graduando em Ciências da computação pela Universidade Federal de Lavras ,
+                        campus Nepomuceno. Tenho interesse em diferentes áreas da computação,
+                        com foco especial em bancos de dados, qualidade de software e arquitetura.
+                    </p>
+                    <p>
+                        Formação e experiências focadas em programação, redes, bancos
+                        relacionais, qualidade de software, paradigmas de programação e desenvolvimento de software.
+                    </p>
+
+                    <div class="w3-row-padding mt-3">
+                        <div class="w3-col s12 m6 mb-3-mobile">
+                            <div class="mini-card">
+                                <span>Formação</span>
+                                <strong>Técnico em Redes de Computadores</strong>
+                                <strong>Graduando em Ciências da Computação</strong>
+                            </div>
+                        </div>
+                        <div class="w3-col s12 m6">
+                            <div class="mini-card">
+                                <span>Atuação</span>
+                                <strong>Analista de qualidade de software</strong>
+                                <strong>Desenvolvedor de frameworks voltados para automatização</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia" class="section-block section-muted">
+        <div class="container-fluid">
+            <div class="section-heading">
+                <p class="eyebrow">EXPERIÊNCIA</p>
+                <h2>Experiência profissional</h2>
+            </div>
+
+            <article class="experience-card">
+                <div class="w3-row-padding">
+                    <div class="w3-col l4 m12">
+                        <p class="small text-body-secondary mb-2">INSTITUIÇÃO</p>
+                        <h3>Instituto Mineiro de Agropecuária — IMA</h3>
+                    </div>
+                    <div class="w3-col l8 m12">
+                        <p>
+                            Participação ativa no processo de qualidade do desenvolvimento
+                            de três sistemas públicos.
+                        </p>
+
+                        <div class="tag-list">
+                            <span class="tag">SIDAGRO</span>
+                            <span class="tag">Sistema de Apoio Fiscal - SAF</span>
+                            <span class="tag">Sistema de Geoprocessamento - GeoProcess</span>
+                        </div>
+
+                        <div class="publication-callout mt-4">
+                            <p class="small text-body-secondary mb-1">PUBLICAÇÃO RELACIONADA</p>
+                            <h4>Testes Funcionais Automatizados como Fonte para Geração Automatizada de Manuais de
+                                Usuário no Instituto Mineiro de Agropecuária</h4>
+                            <p class="mb-3">
+                                Trabalho publicado no SAST 2026, desenvolvido a partir da experiência com automação de
+                                testes funcionais e geração de documentação de sistemas no Instituto Mineiro de
+                                Agropecuária.
+                            </p>
+                            <a href="https://cbsoft.sbc.org.br/2026/data/papers/sast/Testes%20Funcionais%20Automatizados%20como%20Fonte%20para%20Gera%C3%A7%C3%A3o%20Automatizada%20de%20Manuais%20de%20Usu%C3%A1rio%20no%20Instituto%20Mineiro%20de%20Agropecu%C3%A1ria.pdf"
+                               target="_blank" rel="noopener" class="text-decoration-none fw-semibold">Ver publicação
+                                →</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section-block">
+        <div class="container-fluid">
+            <div class="section-heading">
+                <p class="eyebrow">COMPETÊNCIAS</p>
+                <h2>Habilidades</h2>
+            </div>
+
+            <div class="w3-row-padding">
+                <div class="w3-col l6 m12 mb-4">
+                    <h3 class="h5 mb-3">Linguagens</h3>
+                    <div class="skill-grid">
+                        <a class="skill-card" href="https://en.cppreference.com/w/c" target="_blank"
+                           rel="noopener">C</a>
+                        <a class="skill-card" href="https://en.cppreference.com/w/cpp" target="_blank" rel="noopener">C++</a>
+                        <a class="skill-card" href="https://learn.microsoft.com/dotnet/csharp/" target="_blank"
+                           rel="noopener">C#</a>
+                        <a class="skill-card" href="https://dev.java/" target="_blank" rel="noopener">Java</a>
+                        <a class="skill-card" href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank"
+                           rel="noopener">JavaScript</a>
+                        <a class="skill-card" href="https://www.python.org/" target="_blank" rel="noopener">Python</a>
+                        <a class="skill-card" href="https://www.haskell.org/" target="_blank" rel="noopener">Haskell</a>
+                    </div>
+                </div>
+
+                <div class="w3-col l6 m12 mb-4">
+                    <h3 class="h5 mb-3">Banco de Dados</h3>
+                    <div class="skill-grid">
+                        <a class="skill-card" href="https://www.postgresql.org/" target="_blank" rel="noopener">PostgreSQL</a>
+                        <a class="skill-card" href="https://www.mysql.com/" target="_blank" rel="noopener">MySQL</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">SQL</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Modelagem</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Administração de SGBDs</a>
+                    </div>
+                </div>
+
+                <div class="w3-col l6 m12 mb-4">
+                    <h3 class="h5 mb-3">Paradigmas</h3>
+                    <div class="skill-grid">
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">POO</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Programação Funcional</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Programação Orientada a
+                            Aspectos</a>
+                    </div>
+                </div>
+
+                <div class="w3-col l6 m12 mb-4">
+                    <h3 class="h5 mb-3">Outros conhecimentos</h3>
+                    <div class="skill-grid">
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Redes de Computadores</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Qualidade de Software</a>
+                        <a class="skill-card" href="#" target="_blank" rel="noopener">Arquitetura de Software</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section-block section-muted">
+        <div class="container-fluid">
+            <div class="section-heading">
+                <p class="eyebrow">PORTFÓLIO</p>
+                <h2>Projetos</h2>
+                <p class="section-intro">
+                    Projetos acadêmicos e trabalhos disponibilizados publicamente.
+                </p>
+            </div>
+
+            <div class="w3-row-padding">
+                <!-- Projeto 01 -->
+                <div class="w3-col m6 l4 mb-4">
+                    <button class="project-card w-100 text-start" type="button"
+                            data-project-title="Sistema Web de Vendas e Controle de Estoque"
+                            data-project-tech="React · Vite · Spring Boot · MySQL"
+                            data-project-summary="Sistema web de vendas e controle de estoque desenvolvido para apoiar o gerenciamento de produtos, clientes e vendas. A aplicação possui integração entre frontend e backend, com atualização automática do estoque conforme as vendas são registradas e persistência dos dados em MySQL 8. O projeto foi desenvolvido com foco em organização, simplicidade de uso e integração entre as diferentes camadas da aplicação."
+                            data-project-link="https://github.com/TobiasMaugus/Engenharia_Software.git">
+                        <span class="project-index">01</span>
+                        <span class="project-title">Sistema Web de Vendas e Controle de Estoque</span>
+                        <span class="project-meta">React · Vite · Spring Boot · MySQL</span>
+                        <span class="project-desc d-block small text-body-secondary mt-2">Sistema web para gerenciamento de produtos, clientes, vendas e estoque, desenvolvido com frontend em React e backend em Spring Boot.</span>
+                        <span class="project-arrow">↗</span>
+                    </button>
+                </div>
+
+                <!-- Projeto 02 -->
+                <div class="w3-col m6 l4 mb-4">
+                    <button class="project-card w-100 text-start" type="button"
+                            data-project-title="Compilador para Linguagem Imperativa Simplificada"
+                            data-project-tech="C++ · Compiladores"
+                            data-project-summary="Projeto acadêmico de desenvolvimento incremental de um compilador para uma linguagem imperativa simplificada. O projeto contempla as etapas de análise léxica, análise sintática, análise semântica e geração de código intermediário. Cada etapa foi desenvolvida e organizada separadamente, acompanhada de exemplos e mecanismos próprios para compilação e execução."
+                            data-project-link="https://github.com/Kenny-0h/Compiler-Project.git">
+                        <span class="project-index">02</span>
+                        <span class="project-title">Compilador para Linguagem Imperativa Simplificada</span>
+                        <span class="project-meta">C++ · Compiladores</span>
+                        <span class="project-desc d-block small text-body-secondary mt-2">Desenvolvimento incremental de um compilador para uma linguagem imperativa simplificada, abrangendo diferentes etapas do processo de compilação.</span>
+                        <span class="project-arrow">↗</span>
+                    </button>
+                </div>
+
+                <!-- Projeto 03 -->
+                <div class="w3-col m6 l4 mb-4">
+                    <button class="project-card w-100 text-start" type="button"
+                            data-project-title="Simulador Funcional do Processador UFLA-RISC"
+                            data-project-tech="UFLA-RISC · Arquitetura de Computadores"
+                            data-project-summary="Projeto acadêmico desenvolvido para a disciplina de Arquitetura de Computadores II. O projeto implementa um simulador funcional para o processador RISC de 32 bits UFLA-RISC, permitindo representar e executar as operações definidas para a arquitetura estudada na disciplina."
+                            data-project-link="https://github.com/TobiasMaugus/ufla-risc-simulador-grupo1.git">
+                        <span class="project-index">03</span>
+                        <span class="project-title">Simulador Funcional do Processador UFLA-RISC</span>
+                        <span class="project-meta">UFLA-RISC · Arquitetura de Computadores</span>
+                        <span class="project-desc d-block small text-body-secondary mt-2">Simulador funcional de um processador RISC de 32 bits, desenvolvido para representar o funcionamento do processador UFLA-RISC.</span>
+                        <span class="project-arrow">↗</span>
+                    </button>
+                </div>
+
+                <!-- Projeto 04 -->
+                <div class="w3-col m6 l4 mb-4">
+                    <button class="project-card w-100 text-start" type="button"
+                            data-project-title="Notebooks de Programação Matemática"
+                            data-project-tech="Jupyter Notebook · Programação Matemática"
+                            data-project-summary="Repositório destinado ao armazenamento dos notebooks Jupyter desenvolvidos para a disciplina de Programação Matemática — GCC118. O repositório reúne as atividades e implementações realizadas ao longo da disciplina, servindo como registro dos experimentos e soluções desenvolvidos durante o curso."
+                            data-project-link="https://github.com/Kenny-0h/Programacao_Matematica_Notebooks.git">
+                        <span class="project-index">04</span>
+                        <span class="project-title">Notebooks de Programação Matemática</span>
+                        <span class="project-meta">Jupyter Notebook · Programação Matemática</span>
+                        <span class="project-desc d-block small text-body-secondary mt-2">Coleção de notebooks desenvolvidos ao longo da disciplina de Programação Matemática, reunindo implementações, experimentos e atividades da disciplina.</span>
+                        <span class="project-arrow">↗</span>
+                    </button>
+                </div>
+
+                <!-- Projeto 05 -->
+                <div class="w3-col m6 l4 mb-4">
+                    <button class="project-card w-100 text-start" type="button"
+                            data-project-title="Color Arrange"
+                            data-project-tech="Desenvolvimento Web · Lógica · JavaScript"
+                            data-project-summary="Color Arrange é um jogo de lógica e estratégia baseado na organização de peças em um tabuleiro. O objetivo é reorganizar todas as peças em suas posições corretas utilizando uma sequência de movimentos válidos. A partida não possui uma condição de derrota por erros, permitindo que o jogador continue tentando até solucionar o tabuleiro ou desistir. A pontuação considera a eficiência da solução, combinando o tempo gasto e o número de movimentos realizados de acordo com o tamanho do tabuleiro."
+                            data-project-link="https://github.com/Kenny-0h/Color_Arrange.git">
+                        <span class="project-index">05</span>
+                        <span class="project-title">Color Arrange</span>
+                        <span class="project-meta">Desenvolvimento Web · Lógica · JavaScript</span>
+                        <span class="project-desc d-block small text-body-secondary mt-2">Jogo de lógica e estratégia baseado na organização de peças em um tabuleiro, com pontuação determinada pela eficiência dos movimentos e pelo tempo de resolução.</span>
+                        <span class="project-arrow">↗</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUBLICAÇÕES -->
+    <section id="publicacoes" class="section-block">
+        <div class="container-fluid">
+            <div class="section-heading">
+                <p class="eyebrow">PRODUÇÃO</p>
+                <h2>Publicações</h2>
+            </div>
+
+            <article class="publication-card">
+                <div>
+                    <p class="small text-body-secondary mb-2">SAST 2026</p>
+                    <h3>Testes Funcionais Automatizados como Fonte para Geração Automatizada de Manuais de Usuário no
+                        Instituto Mineiro de Agropecuária</h3>
+                    <p>
+                        Trabalho publicado no SAST 2026, abordando o uso de testes funcionais automatizados como fonte
+                        para a geração automatizada de manuais de usuário.
+                    </p>
+                </div>
+                <a href="https://cbsoft.sbc.org.br/2026/data/papers/sast/Testes%20Funcionais%20Automatizados%20como%20Fonte%20para%20Gera%C3%A7%C3%A3o%20Automatizada%20de%20Manuais%20de%20Usu%C3%A1rio%20no%20Instituto%20Mineiro%20de%20Agropecu%C3%A1ria.pdf"
+                   target="_blank" rel="noopener" class="w3-button w3-round btn-outline-secondary">Ver publicação →</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact-section section-block">
+        <div class="container-fluid">
+            <div class="w3-row-padding w3-flex-vertical-bottom">
+                <div class="w3-col l7 m12">
+                    <p class="eyebrow">CONTATO</p>
+                    <h2>Vamos conversar.</h2>
+                    <p class="lead text-body-secondary">
+                        Para contato profissional ou acadêmico, utilize um dos meus e-mails.
+                    </p>
+                </div>
+                <div class="w3-col l5 m12">
+                    <div class="contact-links">
+                        <a href="mailto:luiskennedygervasioturola@gmail.com">luiskennedygervasioturola@gmail.com</a>
+                        <a href="mailto:luis.turola@ufla.estudante.br">luis.turola@ufla.estudante.br</a>
+                        <a href="https://github.com/Kenny-0h" target="_blank" rel="noopener">GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- MODAL DE PROJETO (W3.CSS MODAL) -->
+<div class="w3-modal" id="projectModal">
+    <div class="w3-modal-content w3-animate-zoom modal-content">
+        <div class="modal-header border-0 d-flex-between">
+            <div>
+                <p class="eyebrow mb-2">PROJETO</p>
+                <h2 class="modal-title h3" id="projectModalLabel">Projeto</h2>
+            </div>
+            <button type="button" class="close-button" id="modalClose">&times;</button>
+        </div>
+        <div class="modal-body pt-0">
+            <p id="projectModalTech" class="text-body-secondary"></p>
+            <p id="projectModalSummary"></p>
+            <a id="projectModalLink" href="#" class="w3-button w3-round btn-primary mt-2" target="_blank"
+               rel="noopener">Ver no GitHub →</a>
+        </div>
+    </div>
+</div>
+
+<!-- RODAPÉ DA PÁGINA -->
+<footer class="footer">
+    <div class="container-fluid d-flex-between flex-mobile-column">
+        <span>© 2026 Nome Profissional</span>
+        <a href="../index.html">Escolher versão</a>
+    </div>
+</footer>
+
+<!-- JavaScript Personalizado -->
+<script src="assets/js/script.js"></script>
 </body>
 </html>

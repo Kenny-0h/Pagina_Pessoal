@@ -1,5 +1,5 @@
 /* =========================================================
-   Página Pessoal — Bootstrap
+   Página Pessoal — W3.CSS Versão
    ========================================================= */
 
 /* TEMA 1: CLARO */
@@ -15,7 +15,7 @@ html[data-theme="light"] {
     --site-sidebar: #f8fafc;
     --site-quick-bg: #111827;
     --site-quick-text: #ffffff;
-    --bs-btn-close-filter: none;
+    --close-btn-color: #111827;
 }
 
 /* TEMA 2: ESCURO */
@@ -31,7 +31,7 @@ html[data-theme="dark"] {
     --site-sidebar: #0d1322;
     --site-quick-bg: #1e293b;
     --site-quick-text: #f8fafc;
-    --bs-btn-close-filter: invert(1) grayscale(100%) brightness(200%);
+    --close-btn-color: #f3f4f6;
 }
 
 /* TEMA 3: MARROM CLARO */
@@ -47,7 +47,7 @@ html[data-theme="warm"] {
     --site-sidebar: #f5efe6;
     --site-quick-bg: #3a2e26;
     --site-quick-text: #faf7f2;
-    --bs-btn-close-filter: none;
+    --close-btn-color: #2d241e;
 }
 
 :root {
@@ -55,12 +55,16 @@ html[data-theme="warm"] {
     --site-transition: 200ms ease;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 2rem;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
     html {
         scroll-padding-top: 5rem;
     }
@@ -69,7 +73,9 @@ html {
 body {
     background: var(--site-bg);
     color: var(--site-text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     transition: background-color var(--site-transition), color var(--site-transition);
+    margin: 0;
 }
 
 a {
@@ -77,79 +83,199 @@ a {
 }
 
 /* ---------------------------------------------------------
+   UTILITÁRIOS DE LAYOUT (Substituindo Bootstrap)
+   --------------------------------------------------------- */
+.container-fluid {
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container-fluid {
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+}
+
+.d-flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.d-flex-gap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.lh-sm {
+    line-height: 1.25;
+}
+
+.text-start {
+    text-align: left;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.small, small {
+    font-size: 0.875rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.h5 {
+    font-size: 1.25rem;
+}
+
+.h3 {
+    font-size: 1.75rem;
+}
+
+.display-6 {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 600;
+}
+
+.text-muted, .text-body-secondary {
+    color: var(--site-muted) !important;
+}
+
+.w3-flex-vertical-center {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.w3-flex-vertical-bottom {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+/* ---------------------------------------------------------
    MENU LATERAL (SIDEBAR)
    --------------------------------------------------------- */
 .sidebar {
-    background: var(--site-sidebar);
+    background: var(--site-sidebar) !important;
     border-right: 1px solid var(--site-border);
     transition: background-color var(--site-transition), border-color var(--site-transition);
-}
-
-@media (min-width: 992px) {
-    .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 250px;
-        height: 100vh;
-        z-index: 1030;
-        overflow-y: auto;
-    }
-
-    .sidebar-inner {
-        height: 100%;
-        min-height: 100%;
-    }
-}
-.offcanvas-body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    width: 250px;
+    z-index: 1030;
 }
 
 .sidebar-inner {
-    min-height: 100%;
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
+    min-height: 100%;
+    height: 100%;
 }
 
 .brand {
     color: var(--site-text);
     font-weight: 700;
+    font-size: 1.25rem;
     letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 2rem;
 }
 
 .sidebar .nav-link {
-    color: var(--site-muted);
+    color: var(--site-muted) !important;
     padding: 0.55rem 0.7rem;
     border-radius: 0.5rem;
+    text-decoration: none;
     transition: background-color var(--site-transition), color var(--site-transition);
+    background: transparent;
+    text-align: left;
 }
 
 .sidebar .nav-link:hover,
-.sidebar .nav-link:focus,
-.sidebar .nav-link.active {
-    color: var(--site-text);
-    background: var(--site-surface-strong);
+.sidebar .nav-link:focus {
+    color: var(--site-text) !important;
+    background: var(--site-surface-strong) !important;
 }
 
 .sidebar-footer {
+    margin-top: auto;
     padding-top: 2rem;
 }
 
 /* ---------------------------------------------------------
    CONTEÚDO DA PÁGINA & FOOTER
    --------------------------------------------------------- */
-@media (min-width: 992px) {
+@media (min-width: 993px) {
     .page-content,
     .footer {
         margin-left: 250px;
     }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
     .page-content,
     .footer {
         margin-left: 0;
@@ -189,6 +315,7 @@ a {
     line-height: 0.9;
     letter-spacing: -0.065em;
     font-weight: 800;
+    margin: 0;
 }
 
 .hero-subtitle {
@@ -240,6 +367,7 @@ a {
 .info-cell h2 {
     font-size: 1.25rem;
     letter-spacing: -0.02em;
+    margin: 0;
 }
 
 .info-cell p {
@@ -261,6 +389,7 @@ a {
     letter-spacing: -0.06em;
     line-height: 0.95;
     font-weight: 800;
+    margin: 0;
 }
 
 .section-intro {
@@ -297,6 +426,10 @@ a {
     margin-bottom: 0.5rem;
 }
 
+.mini-card strong {
+    display: block;
+}
+
 .experience-card {
     padding: clamp(1.5rem, 4vw, 3rem);
 }
@@ -305,6 +438,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 .tag {
@@ -358,6 +492,7 @@ a {
     border-radius: var(--site-radius);
     background: var(--site-bg);
     color: var(--site-text);
+    cursor: pointer;
     transition: transform var(--site-transition), background-color var(--site-transition), border-color var(--site-transition), box-shadow var(--site-transition);
 }
 
@@ -401,15 +536,32 @@ a {
     color: var(--site-accent);
 }
 
+/* ---------------------------------------------------------
+   MODAL DE PROJETOS (W3.CSS MODAL)
+   --------------------------------------------------------- */
+.w3-modal {
+    padding-top: 10vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1050;
+}
+
 .modal-content {
     background: var(--site-bg);
     color: var(--site-text);
     border: 1px solid var(--site-border);
     border-radius: var(--site-radius);
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
 }
 
-.modal .btn-close {
-    filter: var(--bs-btn-close-filter, none);
+.close-button {
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--close-btn-color);
+    line-height: 1;
 }
 
 .publication-card {
@@ -464,42 +616,49 @@ a {
    BOTÕES E COMPONENTES
    --------------------------------------------------------- */
 .btn-primary {
-    background-color: var(--site-accent);
-    border-color: var(--site-accent);
-    color: #ffffff;
+    background-color: var(--site-accent) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--site-accent);
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
+.btn-primary:focus {
     background-color: var(--site-accent-hover) !important;
     border-color: var(--site-accent-hover) !important;
     color: #ffffff !important;
 }
 
 .btn-outline-secondary {
-    color: var(--site-text);
-    border-color: var(--site-border);
+    color: var(--site-text) !important;
+    border: 1px solid var(--site-border);
+    background: transparent;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus {
-    background-color: var(--site-surface-strong);
-    color: var(--site-text);
+    background-color: var(--site-surface-strong) !important;
+    color: var(--site-text) !important;
     border-color: var(--site-border);
 }
 
 .theme-button,
 .menu-button {
-    color: var(--site-text);
-    border-color: var(--site-border);
+    color: var(--site-text) !important;
+    border: 1px solid var(--site-border);
     background: transparent;
+    cursor: pointer;
 }
 
 .theme-button:hover,
 .menu-button:hover {
-    color: var(--site-text);
-    background: var(--site-surface-strong);
+    color: var(--site-text) !important;
+    background: var(--site-surface-strong) !important;
     border-color: var(--site-border);
 }
 
@@ -507,12 +666,13 @@ a {
     background: var(--site-sidebar);
     border-bottom: 1px solid var(--site-border);
     transition: background-color var(--site-transition), border-color var(--site-transition);
+    z-index: 1020;
 }
 
 /* ---------------------------------------------------------
    RESPONSIVIDADE
    --------------------------------------------------------- */
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
     .section-block {
         padding: 5rem 0;
     }
@@ -530,9 +690,13 @@ a {
     .info-cell:last-child {
         border-bottom: 0;
     }
+
+    .mb-3-mobile {
+        margin-bottom: 1rem;
+    }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     .hero-title {
         font-size: clamp(3.2rem, 16vw, 5.5rem);
     }
@@ -544,5 +708,10 @@ a {
     .publication-card {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .flex-mobile-column {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
