@@ -1,4 +1,4 @@
-# Portfólio Pessoal — GAC116 (Programação Web)
+# Portfólio Pessoal
 
 Este repositório contém a **Atividade Prática 2** da disciplina **GAC116 - Programação Web** da Universidade Federal de Lavras (UFLA).
 
@@ -8,14 +8,14 @@ O objetivo do projeto é o desenvolvimento de uma página pessoal/portfólio aca
 
 ## 🚀 Links
 
-- **GitHub Pages:** [https://kenny-0h.github.io/pagina-pessoal/](https://kenny-0h.github.io/pagina-pessoal/)
+- **GitHub Pages:** [https://kenny-0h.github.io/pagina-pessoal/](https://kenny-0h.github.io/Pagina_Pessoal/)
 - **Repositório GitHub:** [https://github.com/Kenny-0h/pagina-pessoal](https://github.com/Kenny-0h/pagina-pessoal)
 
 ---
 
 ## 📁 Estrutura do Projeto
 
-O projeto foi organizado de acordo com a estrutura recomendada no enunciado do trabalho:
+O projeto foi organizado de acordo com a seguinte estrutura:
 
 ```text
 pagina-pessoal/
@@ -32,7 +32,7 @@ pagina-pessoal/
 │       │   └── script.js
 │       └── img/
 │
-└── outro-framework/             # Versão 2: Framework Alternativo (ex: Tailwind / Bulma)
+└── outro-framework/             # Versão 2: Framework W3.css
     ├── index.html
     └── assets/
         ├── css/
